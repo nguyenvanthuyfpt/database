@@ -1,0 +1,10 @@
+1.Backup
+
+mysqldump.exe -u [user_name] -p [database_name] > [file_name.sql]
+
+mysqldump.exe -u root -p bacninh_cqdt > bacninh.sql
+
+
+2.Retore
+mysqladmin -u root -p create mytestdatabase
+mysql -u root -p mytestdatabase < drupaldb-20090505.sql
