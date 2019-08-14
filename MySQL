@@ -10,3 +10,23 @@ mysqldump.exe -P 3030 -h 192.168.1.198 -u botaichinh -p --databases btc_dvc > bt
 2.Retore
 mysqladmin -u root -p create mytestdatabase
 mysql -u root -p mytestdatabase < drupaldb-20090505.sql
+
+-- show port listener
+netstat -tlnp
+
+-- change config mysql
+sudo nano /etc/mysql/my.cnf
+-- restart
+sudo /etc/init.d/mysql restart
+-- show variables mysql
+mysqladmin -u root -p variables
+
+-- Instal JDK
+sudo apt install oracle-java8-installer
+
+-- Create User
+ CREATE USER 'botaichinh'@'localhost';
+ 
+ GRANT ALL PRIVILEGES ON *.* TO 'botaichinh'@'%' IDENTIFIED BY 'botaichinh' WITH GRANT OPTION
+ 
+ FLUSH PRIVILEGES;
