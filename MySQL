@@ -4,6 +4,8 @@ mysqldump.exe -u [user_name] -p [database_name] > [file_name.sql]
 
 mysqldump.exe -u root -p bacninh_cqdt > bacninh.sql
 
+mysqldump.exe -P 3030 -h 192.168.1.198 -u botaichinh -p --databases btc_dvc > btc_dvc.sql
+
 
 2.Retore
 mysqladmin -u root -p create mytestdatabase
